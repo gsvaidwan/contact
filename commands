@@ -1,0 +1,3 @@
+docker build -t gsv12 .
+docker container run -d --name cont2 -p 80:80 gsv12
+docker container attach cont2
