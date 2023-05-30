@@ -1,3 +1,11 @@
+############################## App Container
+
 docker build -t gsv12 .
 docker container run -d --name cont2 -p 80:80 gsv12
 docker container attach cont2
+
+
+############################### MySQL Container
+
+docker pull mysql
+docker run -itd --name=db15 --volumes-from cont-15 -e MYSQL_ROOT_PASSWORD=redhat mysql
